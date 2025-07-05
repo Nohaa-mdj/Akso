@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 10px 80px;
   background-color: #ffffff;
   border-bottom: 2px solid #eaeaea;
 }
@@ -340,6 +340,7 @@ nav a:hover {
 
 .projets {
   margin-bottom: 6%;
+  margin-top: 3%;
 }
 
 .projets button {
@@ -379,6 +380,15 @@ nav a:hover {
 .form-rdv textarea {
   height: 120px;
   resize: vertical;
+}
+
+.projets form {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 35vw;
+  margin: auto;
 }
 
 footer {
@@ -592,8 +602,13 @@ footer {
     font-size: 14px;
   }
 
-  .projets {
+  .projets form {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
   }
 
   .footer {
@@ -641,4 +656,79 @@ footer {
     max-width: 250px;
     margin: 0 auto;
   }
+}
+
+/* =================== CONTACT PAGE =================== */
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: 16px;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+}
+
+.nav ul li:hover {
+  color: #f39c12b3;
+}
+
+.nav a {
+  text-decoration: none !important;
+  color: #4a4a4a !important;
+}
+
+.nav a,
+.nav a:visited {
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #f39c12b3;
+}
+.contact {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.contact button {
+  background: #0d1b2a;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-rdv button {
+  background-color: #b3392f;
+}
+
+.form-rdv button:hover {
+  background-color: #8c2a25;
 }
