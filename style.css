@@ -732,3 +732,7 @@ footer {
 .form-rdv button:hover {
   background-color: #8c2a25;
 }
+
+.contact-footer {
+  text-align: center;
+}
