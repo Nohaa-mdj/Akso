@@ -602,10 +602,13 @@ footer {
     font-size: 14px;
   }
 
+
+
   .projets button {
     width: 80%;
     padding: 12px;
     font-size: 14px;
+    margin-left: 9%;
   }
 
   .projets form {
@@ -614,7 +617,11 @@ footer {
     flex-direction: column;
     gap: 20px;
     max-width: 500px;
-    margin: auto;
+    /*margin: auto;*/
+    margin-right: 3%;
+    margin-left: 3%;
+    align-items: center;
+}
   }
 
   .footer {
@@ -623,7 +630,7 @@ footer {
 
   .footer-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 30px;
     text-align: center;
@@ -830,4 +837,24 @@ footer {
   cursor: pointer;
   transition: background 0.3s;
   text-decoration: none;
+}
+
+
+
+/* =================== CONTACT PAGE version tablette =================== */
+
+@media (max-width: 1024px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    flex: 1; /* prend tout l'espace dispo et pousse le footer en bas */
+    display: flex;
+    flex-direction: column;
+  }
 }
