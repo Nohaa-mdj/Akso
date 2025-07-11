@@ -602,8 +602,6 @@ footer {
     font-size: 14px;
   }
 
-
-
   .projets button {
     width: 80%;
     padding: 12px;
@@ -621,54 +619,53 @@ footer {
     margin-right: 3%;
     margin-left: 3%;
     align-items: center;
+  }
 }
-  }
 
-  .footer {
-    width: 100vw;
-  }
+.footer {
+  width: 100vw;
+}
 
-  .footer-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
-  .footer-container h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #fbb03b;
-  }
+.footer-container h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fbb03b;
+}
 
-  .footer-container p,
-  .footer-container li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 5px 0;
-  }
+.footer-container p,
+.footer-container li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
 
-  .footer-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .footer-container ul li::before {
-    content: "• ";
-    color: #ffffff;
-  }
+.footer-container ul li::before {
+  content: "• ";
+  color: #ffffff;
+}
 
-  .footer-container > div:first-child p {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+.footer-container > div:first-child p {
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 /* =================== CONTACT PAGE =================== */
@@ -839,12 +836,11 @@ footer {
   text-decoration: none;
 }
 
-
-
 /* =================== CONTACT PAGE version tablette =================== */
 
 @media (max-width: 1024px) {
-  html, body {
+  html,
+  body {
     height: 100%;
     margin: 0;
     padding: 0;
