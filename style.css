@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 .overlay h1 {
-  font-family: "Tangerine", cursive;
+  font-family: "WindSong", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -887,13 +887,33 @@ footer {
   color: white;
   text-align: center;
   width: 100%;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  font-family: "Tangerine", cursive;
+  font-family: "WindSong", cursive;
 }
 
 .slider-overlay h1 {
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 50;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slider-logo {
+  position: absolute;
+  z-index: 3;
+  top: 7vw;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.slider-logo img {
+  width: 85%;
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.slider-logo img:hover {
+  opacity: 1;
 }
