@@ -159,6 +159,7 @@ nav a:hover {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  text-decoration: none !important;
 }
 
 .service-card img {
@@ -174,6 +175,7 @@ nav a:hover {
   color: #4a4a4a;
   font-weight: 300;
   position: relative;
+  text-decoration: none !important;
 }
 
 .service-card h3::after {
@@ -183,6 +185,7 @@ nav a:hover {
   height: 1px;
   background-color: #f39c12;
   margin: 10px auto 0;
+  text-decoration: none !important;
 }
 
 .service-card:hover {
@@ -571,6 +574,17 @@ footer {
 
   .service-container {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .service-card:hover {
+    transform: scale(1.03);
   }
 
   .engagements {
