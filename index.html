@@ -21,12 +21,33 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="overlay">
-        <!-- <h2>Notre mission</h2> -->
+    <!-- ESSAI SLIDE -->
+
+    <section class="hero-slider">
+      <div
+        class="slide fade active"
+        style="background-image: url('travaux1.jpg')"
+      ></div>
+      <div
+        class="slide fade"
+        style="background-image: url('travaux2.png')"
+      ></div>
+      <div
+        class="slide fade"
+        style="background-image: url('travaux3.png')"
+      ></div>
+
+      <div class="slider-overlay">
         <h1>La promesse d'un projet réussi</h1>
       </div>
     </section>
+
+    <!--<section class="hero">
+      <div class="overlay">
+      
+        <h1>La promesse d'un projet réussi</h1>
+      </div>
+    </section>-->
 
     <section id="services" class="services">
       <h2>Nos services</h2>
@@ -46,7 +67,7 @@
       </div>
     </section>
 
-    <section id="engagements" class="engagements">
+    <!-- <section id="engagements" class="engagements">
       <div class="engagement-header">
         <h4>Nos engagements</h4>
         <h2>Le respect des délais et du budget</h2>
@@ -92,7 +113,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section>  -->
 
     <section class="clients">
       <h2>Nos clients parlent de nous</h2>
@@ -159,5 +180,20 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showNextSlide() {
+          slides[index].classList.remove("active");
+          index = (index + 1) % slides.length;
+          slides[index].classList.add("active");
+        }
+
+        setInterval(showNextSlide, 3000); // changement toutes les 3 secondes
+      });
+    </script>
   </body>
 </html>
