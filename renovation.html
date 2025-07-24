@@ -17,7 +17,7 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.6);
         justify-content: center;
-        align-items: center;
+        text-align: center;
       }
 
       .modal-content {
@@ -27,17 +27,21 @@
         max-width: 700px;
         border-radius: 10px;
         position: relative;
-        animation: fadeIn 0.3s ease-in-out;
+        animation: slideDown 0.4s ease-out;
+        transform: translateY(-30px);
+        opacity: 0;
+        animation-fill-mode: forwards;
+        align-items: center;
       }
 
-      @keyframes fadeIn {
-        from {
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-30px);
           opacity: 0;
-          transform: translateY(-20px);
         }
-        to {
-          opacity: 1;
+        100% {
           transform: translateY(0);
+          opacity: 1;
         }
       }
 
@@ -52,9 +56,10 @@
       }
 
       .modal-img {
-        width: 100%;
         border-radius: 6px;
         margin-top: 15px;
+        height: 500px;
+        width: 90%;
       }
 
       .content-image {
@@ -79,13 +84,6 @@
         padding: 40px 20px;
       }
 
-      /*footer {
-        text-align: center;
-        padding: 20px;
-        background: #f5f5f5;
-        margin-top: 40px;
-      }*/
-
       header {
         display: flex;
         justify-content: space-between;
@@ -94,24 +92,6 @@
         background: #fff;
         border-bottom: 1px solid #ddd;
       }
-
-      /*nav ul {
-        display: flex;
-        list-style: none;
-        gap: 15px;
-        padding: 0;
-        margin: 0;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-      }
-
-      .logo img {
-        height: 50px;
-      }*/
     </style>
   </head>
   <body>
@@ -155,12 +135,8 @@
             Ce gymnase a été aménagé à partir d’un espace brut, avec une
             isolation acoustique, un sol sportif, et des équipements adaptés.
           </p>
-          <img src="image26.jpg" alt="Vue intérieure" class="modal-img" />
-          <img
-            src="image27.jpg"
-            alt="Installation des équipements"
-            class="modal-img"
-          />
+          <img src="Image23.jpg" alt="étape intérieure" class="modal-img" />
+          <img src="gymnase1.png" alt="Vue intérieure" class="modal-img" />
         </div>
       </div>
     </main>
