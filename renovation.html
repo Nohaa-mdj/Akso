@@ -25,13 +25,15 @@
         padding: 20px;
         width: 90%;
         max-width: 700px;
+        max-height: 90vh; /* Limite en hauteur */
+        overflow-y: auto; /* Active le scroll si nécessaire */
         border-radius: 10px;
         position: relative;
         animation: slideDown 0.4s ease-out;
         transform: translateY(-30px);
         opacity: 0;
         animation-fill-mode: forwards;
-        align-items: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       }
 
       @keyframes slideDown {
@@ -137,6 +139,7 @@
           </p>
           <img src="Image23.jpg" alt="étape intérieure" class="modal-img" />
           <img src="gymnase1.png" alt="Vue intérieure" class="modal-img" />
+          <img src="Image25.jpg" alt="Vue extérieure" class="modal-img" />
         </div>
       </div>
     </main>
