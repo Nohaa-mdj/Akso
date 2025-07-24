@@ -66,7 +66,6 @@ nav a:hover {
   justify-content: center;
   width: 100%;
   background: url("images/renovation.jpg") no-repeat center/cover;
-  /*height: 700px;*/
   align-items: center;
   position: relative;
 }
@@ -74,7 +73,6 @@ nav a:hover {
 .hero .overlay {
   background: url("renovation.jpg") no-repeat center/cover;
   color: #ffffff;
-  /*text-align: center;*/
   padding: 80px 100px;
   width: 100%;
   backdrop-filter: brightness(0.5);
@@ -103,7 +101,6 @@ nav a:hover {
 .engagements,
 .clients,
 .projets {
-  /* padding: 100px 200px;*/
   text-align: center;
   background-color: #fafafa;
 }
@@ -118,8 +115,7 @@ nav a:hover {
   margin-bottom: 6%;
 }
 
-.service-container
-/*.engagement-container*/ {
+.service-container {
   display: flex;
   gap: 50px;
   justify-content: center;
@@ -404,10 +400,12 @@ footer {
   background: #2f2f2f;
   color: #ffffff;
   padding: 60px 4%;
+  margin-top: 20%;
 }
 
 .footer-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   text-align: left;
   gap: 3%;
@@ -476,7 +474,8 @@ footer {
   }
 
   .footer-container {
-    display: grid;
+    display: flex;
+    /*flex-direction: column;*/
     grid-template-columns: 1fr 1fr;
     gap: 40px 60px;
     justify-content: center;
@@ -638,11 +637,13 @@ footer {
 
 .footer {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: row;
+  /*flex-direction: column;*/
   align-items: center;
   gap: 30px;
   text-align: center;
@@ -930,4 +931,17 @@ footer {
 
 .slider-logo img:hover {
   opacity: 1;
+}
+
+/* =================== PAGE RENOVATIONS =================== */
+
+.content-block img {
+  width: 40%;
+  height: auto;
+  max-height: 450px;
+  border-radius: 10px;
+}
+
+.footer-reno {
+  flex: 1;
 }
