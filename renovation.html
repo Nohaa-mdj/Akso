@@ -5,6 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rénovations</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* === STYLES POUR LA MODALE === */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        width: 90%;
+        max-width: 700px;
+        border-radius: 10px;
+        position: relative;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .modal-img {
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 15px;
+      }
+
+      .content-image {
+        width: 100%;
+        max-width: 700px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        border-radius: 10px;
+      }
+
+      .content-image:hover {
+        transform: scale(1.02);
+      }
+
+      .text-content {
+        margin-top: 20px;
+        max-width: 700px;
+        margin-left: 2.3%;
+      }
+
+      main.page-content {
+        padding: 40px 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #f5f5f5;
+        margin-top: 40px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -24,20 +132,59 @@
 
     <main class="page-content">
       <section class="content-block">
+        <!-- Image cliquable -->
         <img
           src="Image25.jpg"
           alt="Travaux de rénovation"
           class="content-image"
+          onclick="openModal()"
         />
+
         <div class="text-content">
           <h3>Gymnase "Halles des sports Colette Besson"</h3>
           <p>Aménagement d'une coque livrée brut en un gymnase.</p>
         </div>
       </section>
+
+      <!-- Fenêtre modale -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Détails du projet</h2>
+          <p>
+            Ce gymnase a été aménagé à partir d’un espace brut, avec une
+            isolation acoustique, un sol sportif, et des équipements adaptés.
+          </p>
+          <img src="image26.jpg" alt="Vue intérieure" class="modal-img" />
+          <img
+            src="image27.jpg"
+            alt="Installation des équipements"
+            class="modal-img"
+          />
+        </div>
+      </div>
     </main>
 
     <footer>
       <p>© 2025 Akso Construction</p>
     </footer>
+
+    <!-- SCRIPT JS -->
+    <script>
+      function openModal() {
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        const modal = document.getElementById("modal");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
