@@ -937,10 +937,25 @@ footer {
 /* =================== PAGE RENOVATIONS =================== */
 
 .content-block img {
-  width: 40%;
+  width: 35%;
   height: auto;
-  max-height: 450px;
+  max-height: 420px;
   border-radius: 10px;
+  margin-left: 2%;
+  margin-top: 3%;
+}
+
+.content-block h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #4a4a4a;
+  margin-left: 5.5%;
+}
+
+.content-block p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-left: 6%;
 }
 
 .footer-reno {
