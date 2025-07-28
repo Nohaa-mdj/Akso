@@ -937,28 +937,50 @@ footer {
 
 /* =================== PAGE RENOVATIONS =================== */
 
-.content-block img {
-  width: 35%;
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 20px;
+  padding: 20px;
+}
+
+.content-block {
+  flex: 0 0 calc(33.33% - 20px); /* 3 colonnes */
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-image {
+  width: 100%;
   height: auto;
-  max-height: 420px;
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 10px;
-  margin-left: 2%;
-  margin-top: 3%;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
-.content-block h3 {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: #4a4a4a;
-  margin-left: 5.5%;
+.content-image:hover {
+  transform: scale(1.02);
 }
 
-.content-block p {
-  font-size: 1rem;
-  color: #4a4a4a;
-  margin-left: 6%;
+.text-content {
+  padding: 10px 15px;
 }
 
-.footer-reno {
-  flex: 1;
+.text-content h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.text-content p {
+  font-size: 0.95rem;
+  color: #555;
 }
