@@ -207,17 +207,55 @@
       </section>
 
       <!-- Fenêtre modale -->
-      <div id="modal" class="modal">
+      <div id="modal2" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
           <h2>Détails du projet</h2>
-          <p>
-            Ce gymnase a été aménagé à partir d’un espace brut, avec une
-            isolation acoustique, un sol sportif, et des équipements adaptés.
-          </p>
+          <img src="Image16.jpg" alt="étape intérieure" class="modal-img" />
+          <img src="Image15.png" alt="Vue intérieure" class="modal-img" />
+          <img src="Image17.jpg" alt="Vue extérieure" class="modal-img" />
+          <img src="Image18.jpg" alt="Vue extérieure" class="modal-img" />
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <h2>Détails du projet</h2>
+          <img src="Image1.jpg" alt="étape intérieure" class="modal-img" />
+          <img src="Image2.jpg" alt="Vue intérieure" class="modal-img" />
+          <img src="Image3.jpg" alt="Vue extérieure" class="modal-img" />
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal4')">&times;</span>
+          <h2>Détails du projet</h2>
           <img src="Image23.jpg" alt="étape intérieure" class="modal-img" />
           <img src="gymnase1.png" alt="Vue intérieure" class="modal-img" />
           <img src="Image25.jpg" alt="Vue extérieure" class="modal-img" />
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal5')">&times;</span>
+          <h2>Détails du projet</h2>
+          <img src="Image7.jpg" alt="étape intérieure" class="modal-img" />
+          <img src="Image8.jpg" alt="Vue intérieure" class="modal-img" />
+          <img src="Image9.jpg" alt="Vue extérieure" class="modal-img" />
+        </div>
+      </div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal6')">&times;</span>
+          <h2>Détails du projet</h2>
+          <img src="Image10.jpg" alt="étape intérieure" class="modal-img" />
+          <img src="Image11.jpg" alt="Vue intérieure" class="modal-img" />
+          <img src="Image12.jpg" alt="Vue extérieure" class="modal-img" />
+          <img src="Image13.jpg" alt="Vue extérieure" class="modal-img" />
         </div>
       </div>
     </main>
@@ -250,19 +288,27 @@
 
     <!-- SCRIPT JS -->
     <script>
-      function openModal() {
-        document.getElementById("modal").style.display = "flex";
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.style.display = "flex";
+        }
       }
 
-      function closeModal() {
-        document.getElementById("modal").style.display = "none";
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.style.display = "none";
+        }
       }
 
       window.onclick = function (event) {
-        const modal = document.getElementById("modal");
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
       };
     </script>
   </body>
